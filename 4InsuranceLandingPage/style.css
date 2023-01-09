@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+/* ----------------------------Reset----------- */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+/* 
+  10. Avoid all text-decoration to links
+*/
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+/* ------------------- End of Reset------- */
+
+body{
+    width: 100%;
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+}
+
+button{
+    height: 55px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    background: transparent;
+    text-transform: uppercase;
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
+}
+button:hover{
+    border: none;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    background: #fff;
+    padding: 0 90px 0 108px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    z-index: 3;
+}
+
+.navbar h1{
+    font-size: 36px;
+    font-family: 'DM Serif Display', serif;
+    color: #2d2640;
+    font-weight: 400;
+}
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar .navlinks a{
+    font-size: 20px;
+    color: #6e6b74;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: color 0.1s;
+}
+
+.navbar ul a:hover{
+    color: #000;
+}
+
+.navbar ul li a.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    width: 155px;
+    border: 1px solid #6e6b74;
+    border-radius: 5px;
+    background: transparent;
+    transition: all 0.5s ease-in-in;
+}
+
+.navbar ul li a.active:hover{
+    background: #2d2640;
+    color: #fff;
+    border: none;
+}
+
+.main-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+}
+
+.main-content .home{
+    width: 100%;
+    height: 530px;
+    background: #2d2640;
+    color: #fff;
+    display: flex;
+    padding: 60px 108px;
+}
+
+.home .left{
+    margin-right: 150px;
+}
+
+.home .left .title-home{
+    font-size: 61px;
+    letter-spacing: .5px;
+    line-height: 1.14;
+}
+
+.home .left p{
+    color: #bcb8c4;
+    margin-top: 10px;
+    margin-bottom: 32px;
+    font-size: 20px;
+}
+
+.home .left button{
+    width: 155px;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #ffffff;
+}
+
+.home .left button:hover{
+    background: #fff;
+    color: #2d2640;
+}
+
+.home .right{
+    height: inherit;
+}
+
+.home .right img{
+    max-width: 530px;
+    object-fit: cover;
+}
+
+.about{
+    margin-top: 163px;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    gap: 115px;
+    padding: 0 108px;
+    color: #2d2640;
+}
+
+.about button{
+    width: 155px;
+    border: 1px solid #6e6b74;
+    font-size: 1.3em;
+    color: #2d2640;
+}
+
+.about button:hover{
+    background: #2d2640;
+    color: #fff;
+}
+
+.about .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(-50px);
+}
+.about p{
+    color: #bcb8c4;
+    margin-top: 10px;
+    margin-bottom: 32px;
+    font-size: 20px;
+}
+
+.about h1{
+    font-size: 56px;
+}
+
+.about figure{
+    height: 480px;
+    width: 1400px;
+}
+
+.about figure img{
+    height : 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.border-top{
+    height: 2px;
+    width: 200px;
+    background: #bcb8c4;
+    margin-bottom: 10px;
+}
+
+.activities{
+    width: 100%;
+    padding: 0 108px;
+}
+
+.activities h1{
+    font-size: 52px;
+    color: #2d2640;
+    margin-bottom: 60px;
+}
+
+.activities ul{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.activities ul li{
+    color: #6e6b74;
+    margin: 0 9px;
+    opacity: 0.8;
+    font-family: system-ui;
+}
+
+.icon{
+    width: 46px;
+    height: 46px;
+    background: #8ab4f0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+i{
+    font-size: 20px;
+}
+
+aside{
+    height: 290px;
+    background-color: #2d2640;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+}
+
+aside button{
+    width: 184px;
+    border: 1px solid #fff;
+    color: #ffffff;
+}
+
+aside button:hover{
+    background: #fff;
+    color: #2d2640;
+}
+
+aside h4{
+    font-size: 44px;
+    font-weight: 400;
+}
+
+.Proinsure{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 61px 108px 20px 108px;
+}
+
+.Proinsure h1{
+    font-size: 36px;
+    font-family: 'DM Serif Display', serif;
+    color: #2d2640;
+    font-weight: 400;
+}
+
+.social-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #6e6b74;
+}
+
+.social-media {
+display: flex;
+justify-content: space-between;
+gap: 35px;
+}
+
+.social-media a i{
+    color: #6e6b74;
+}
+
+.foot-links{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 23px;
+}
+
+.foot-links a{
+    color: #6e6b74;
+    font-size: 24px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: color .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.foot-links a:hover{
+    color: #000;
+}
+
+footer{
+    height: 95px;
+    background: #2d2640;
+    color: #bcb8c4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+@media only screen and (max-width: 850px){
+    .navbar{
+        height: 120px;
+        flex-direction: column;
+        align-items: center;
+        position: sticky;
+    }
+    .main-content{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-content .home{
+        width: 100vw;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .main-content .home figure{
+        display: none;
+    }
+    .main-content .home .left{
+        width: 100%;
+    }
+
+    .about{
+        display: flex;
+        padding: 0;
+        margin-top: 10%;
+        flex-direction: column-reverse;
+    }    
+    .about h1, .about p{
+        margin: 0;
+        padding: 0;
+    }
+    .about img{
+        display: none;
+    }
+}

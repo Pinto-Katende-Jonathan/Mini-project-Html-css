@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form | Learn to build HTML forms and style it</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,300" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <form class="sign-up">
+        <h1 class="sign-up-title">Sign Up</h1>
+
+        <div class="basic-info">
+            <div class="title">
+                <div class="numerotaion">
+                    <span class="title-number">1</span>
+                </div>
+                <h4 class="title-info"> Your Basic Info</h4>
+            </div>
+            <div class="form-control">
+                <label for="name" class="name">Name:</label>
+                <input type="text" id="name" class="name-field">
+            </div>
+            <div class="form-control">
+                <label for="email" class="email">Email:</label>
+                <input type="email" id="email" class="email-field">
+            </div>
+            <div class="form-control">
+                <label for="password" class="password">password:</label>
+                <input type="password" id="password" class="password-field">
+            </div>
+            <div class="form-control age">
+                <label for="age" class="age">Age:</label>
+                <div>
+                    <input type="radio" name="age" class="age-field" id="age-moins">
+                    <label for="age-moins">Under 13</label>
+                </div>
+                <div>
+                    <input type="radio" name="age" class="age-field" id="age-plus">
+                    <label for="age-plus">Over 13</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="profil">
+            <div class="title">
+                <div class="numerotaion">
+                    <span class="title-number">2</span>
+                </div>
+                <h4 class="title-info">Your Profile</h4>
+            </div>
+            <div class="form-control file">
+                <label class="file">Upload Image:</label>
+                <div class="file-field">
+                    <input type="file">
+                </div>
+            </div>
+            <div class="form-control">
+                <label for="bio" class="bio">Bio:</label>
+                <textarea id="bio" cols="30" rows="5"></textarea>
+            </div>
+            <div class="form-control">
+                <label for="job" class="job">Job Role:</label>
+                <select id="job" name="user_job" class="user_job">
+                    <optgroup label="Web">
+                        <option value="frontend_developer">Front-End Developer</option>
+                        <option value="php_developer">PHP Developer</option>
+                        <option value="python_developer">Python Developer</option>
+                        <option value="rails_developer">Rails Developer</option>
+                        <option value="web_designer">Web Designer</option>
+                        <option value="wordpress_developer">Wordpress Developer</option>
+                    </optgroup>
+                    <optgroup label="Mobile">
+                        <option value="android_developer">Android Developer</option>
+                        <option value="ios_developer">IOS Developer</option>
+                        <option value="mobile_designer">Mobile Designer</option>
+                    </optgroup>
+                    <optgroup label="Business">
+                        <option value="business_owner">Business Owner</option>
+                        <option value="freelancer">Freelancer</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="form-control">
+                <label>Interests:</label>
+                <div>
+                    <input type="checkbox" id="development" />
+                    <label class="light" for="development">Development</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="design" />
+                    <label class="light" for="design">Design</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="business" />
+                    <label class="light" for="business">Business</label>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn-submit">Sign Up</button>
+    </form>
+</body>
+
+</html>
