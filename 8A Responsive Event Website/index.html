@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Encore - An Event website template to practice Responsive Web Design</title>
+</head>
+
+<body>
+    <!-- ===================================== Header ===================================== -->
+    <header class="header">
+        <nav class="links-wrapper">
+            <div class="menu">
+                <h1 class="header-title"><a href="#">Encore</a></h1>
+                <div class="humburger">
+                    <img src="./images/icons8-hamburger-menu-24.png" alt="humbuger menu">
+                </div>
+            </div>
+            <ul class="navbar">
+                <li class="navlink"><a href="#" class="active">HOME</a></li>
+                <li class="navlink"><a href="#events">EVENTS</a></li>
+                <li class="navlink"><a href="#schedule">SCHEDULE</a></li>
+                <li class="navlink"><a href="#venue">VENUE</a></li>
+                <li class="navlink"><a href="#register">REGISTER</a></li>
+            </ul>
+        </nav>
+        <div class="hero-section">
+            <h1 class="hero-title">Dedicated to AltCampus' friends and family</h1>
+            <p class="hero-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate repudiandae alias
+                at fugit officia facere</p>
+
+            <div class="btn">
+                <button class="hero-btn">Register Now</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================================== Main ===================================== -->
+    <main>
+        <article class="events" id="events">
+            <div class="wrapper-card">
+
+                <div class="card">
+                    <img src="./images/event.jpeg" alt="event">
+                    <div class="info">
+                        <h4 class="title-card">The Encore Events</h4>
+                        <p class="card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ipsam
+                            porro
+                            qui omnis doloribus!</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./images/schedule.jpeg" alt="schedule">
+                    <div class="info">
+                        <h4 class="title-card">The Encore Events</h4>
+                        <p class="card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+                            ipsam
+                            porro
+                            qui omnis doloribus!</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./images/venue.jpeg" alt="venue">
+                    <div class="info">
+                        <h4 class="title-card">The Encore Events</h4>
+                        <p class="card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+                            ipsam
+                            porro
+                            qui omnis doloribus!</p>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+    </main>
+
+    <!-- ===================================== Footer ===================================== -->
+    <footer>
+        <h4>&copy; <a href="#" style="color: #fff;">AltCampus</a> </h4>
+        <ul class="ft-links" id="venue">
+            <li><a href="#" class="ft-link">Home</a></li>
+            <li><a href="#" class="ft-link">Events</a></li>
+            <li><a href="#" class="ft-link">Schedule</a></li>
+            <li><a href="#" class="ft-link">Venue</a></li>
+            <li><a href="#" class="ft-link">Register</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        const menu = document.querySelector(".humburger")
+        const nav = document.querySelector(".navbar")
+
+        menu.addEventListener("click", () => {
+            nav.classList.toggle("active")
+        })
+
+    </script>
+</body>
+
+</html>

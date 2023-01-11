@@ -1,0 +1,420 @@
+@import url("https://fonts.cdnfonts.com/css/euclid-circular-b");
+
+/* ===================================== Reset ===================================== */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Euclid Circular B", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* ===================================== Variables ===================================== */
+:root {
+  --ORANGE: #e93e32;
+  --LINK-SIZE: 1rem;
+  --TITLE-SIZE: 3rem;
+  --BLUE: #0b1d54;
+}
+
+/* ===================================== Header ===================================== */
+.header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      to right top,
+      rgba(11, 29, 84, 0.3),
+      rgba(11, 29, 84, 0.7)
+    ),
+    url(./images/banner.jpeg) no-repeat;
+  background-size: cover;
+  padding: 0.9rem 4.3rem 0 4.3rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.header .links-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .links-wrapper .header-title {
+  font-size: var(--TITLE-SIZE);
+  font-weight: 300;
+}
+
+.header-title a {
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  color: #fff;
+  gap: 2.75rem;
+  align-items: center;
+}
+
+.navbar a {
+  color: #fff;
+  transition: 0.1s;
+  position: relative;
+}
+
+.navbar a:hover {
+  color: var(--ORANGE);
+}
+
+.navbar a.active::before {
+  content: "";
+  position: absolute;
+  background-color: #e93e32;
+  width: 100%;
+  height: 2px;
+  bottom: -10px;
+}
+
+.header .hero-section {
+  align-self: center;
+  margin: auto 0;
+}
+
+.hero-section .hero-title {
+  font-size: var(--TITLE-SIZE);
+  font-weight: 500;
+}
+
+.hero-section > *:not(button) {
+  padding-bottom: 22px;
+}
+
+.hero-section p {
+  font-size: 1.4rem;
+  color: rgb(191, 203, 239);
+  max-width: 90%;
+  text-align: center;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  transform: translateX(-5%);
+}
+
+.hero-section .hero-btn {
+  background: transparent;
+  border: 2px solid #fff;
+  padding: 15px 25px;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.hero-btn:hover {
+  background-color: var(--ORANGE);
+  color: #fff;
+  border: none;
+}
+
+/* ===================================== MAIN ===================================== */
+main {
+  width: 100%;
+}
+
+.events {
+  width: 100%;
+  height: auto;
+  padding: 68px;
+  background-color: #fbfbfd;
+}
+
+.card {
+  height: 375px;
+  width: 362px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+}
+
+.card img {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+}
+
+.wrapper-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+  gap: 2rem;
+}
+
+.info {
+  padding: 20px;
+}
+
+.info .title-card {
+  color: var(--BLUE);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.card-info {
+  font-size: 1rem;
+  color: rgb(106, 124, 148);
+  line-height: 1.5rem;
+  font-weight: 300;
+  margin-top: 8px;
+}
+
+/* ===================================== Footer ===================================== */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 68px;
+  background-color: var(--BLUE);
+  height: 132px;
+  color: #fff;
+}
+
+footer h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+footer .ft-links {
+  display: flex;
+  gap: 2.75rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.ft-links a {
+  color: #bfcbef;
+}
+
+.ft-links a:hover {
+  color: var(--ORANGE);
+}
+
+/* ===================================== Hambuger menu ===================================== */
+.menu .humburger {
+  display: none;
+}
+
+/* ===================================== RESPONSIVE =====================================*/
+@media screen and (360px < width < 800px) {
+  /* =========== Header ============ */
+  .header {
+    padding: 0.1rem 1.3rem 0 1.3rem;
+    position: relative;
+  }
+
+  .links-wrapper {
+    flex-direction: column;
+    font-size: 14px;
+  }
+  .header-title a {
+    font-size: 2rem;
+  }
+  .navbar {
+    background-color: #fff;
+    margin-top: 1rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 20px 50px;
+    align-items: flex-end;
+    width: 200px;
+    align-self: flex-end;
+    border-radius: 5px;
+    position: absolute;
+    top: 60px;
+    transition: all 0.2s ease-in-out;
+    right: 0;
+    display: none;
+  }
+
+  .navbar.active {
+    display: inline-block;
+    right: 10px;
+    transition: all 0.2s ease-in;
+  }
+  .navbar a {
+    color: #0b1d54;
+  }
+  .navbar a.active::before {
+    bottom: -6px;
+  }
+
+  .menu {
+    position: relative;
+  }
+  .menu .humburger {
+    display: block;
+    background-color: #fff;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+  }
+
+  a.active::before {
+    display: none;
+  }
+  .hero-section .hero-title {
+    font-size: 32px;
+  }
+  .hero-section .hero-info {
+    font-size: 20px;
+  }
+
+  div button .hero-btn {
+    font-size: 0.8rem;
+    height: 35px;
+  }
+
+  /* =========== events =========== */
+  .events {
+    padding: 15px;
+  }
+  .card {
+    max-width: 100%;
+  }
+
+  .wrapper-card {
+    align-items: center;
+    justify-items: center;
+  }
+  /* ========= Footer =========== */
+  footer {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    /* margin-top: 700px; */
+  }
+
+  footer .ft-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  main {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .card {
+    width: 230px;
+  }
+
+  .card-info {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+
+  .title-card {
+    margin-top: 0;
+  }
+
+  .wrapper-card {
+    justify-items: flex-start;
+  }
+
+  .hero-section .hero-btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .hero-section .hero-title {
+    font-size: 22px;
+  }
+
+  .hero-section .hero-info {
+    font-size: 17px;
+  }
+
+  .links-wrapper {
+    flex-direction: column;
+    font-size: 14px;
+  }
+  .header-title a {
+    font-size: 2rem;
+  }
+  .navbar {
+    background-color: #fff;
+    margin-top: 1rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 20px 50px;
+    align-items: flex-end;
+    width: 200px;
+    align-self: flex-end;
+    border-radius: 5px;
+    position: absolute;
+    top: 60px;
+    transition: all 0.2s ease-in-out;
+    right: 0;
+    display: none;
+  }
+
+  .navbar.active {
+    display: inline-block;
+    right: 10px;
+    transition: all 0.2s ease-in;
+  }
+  .navbar a {
+    color: #0b1d54;
+  }
+  .navbar a.active::before {
+    bottom: -6px;
+  }
+
+  .menu {
+    position: relative;
+  }
+  .menu .humburger {
+    display: block;
+    background-color: #fff;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+  }
+
+  a.active::before {
+    display: none;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    /* margin-top: 700px; */
+  }
+
+  footer .ft-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
