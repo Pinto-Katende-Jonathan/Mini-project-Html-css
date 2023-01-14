@@ -253,6 +253,9 @@ span.product {
   img {
     max-width: 100%;
   }
+  .ft-info {
+    margin-left: 2%;
+  }
 }
 
 @media only screen and (max-width: 300px) {
